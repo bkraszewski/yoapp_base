@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "140090277265",
+    "firebase_url": "https://yoappprogramistok.firebaseio.com",
+    "project_id": "yoappprogramistok",
+    "storage_bucket": "yoappprogramistok.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140090277265:android:3d8d0cf5da9b69f200ae30",
+        "android_client_info": {
+          "package_name": "pl.programistok.yoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140090277265-k8h6qssfuv6ng3ebiq90dem6kqvqiiia.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnArLSNFbqcbpj8cKg7NEVQH85Tm1SCrA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140090277265-k8h6qssfuv6ng3ebiq90dem6kqvqiiia.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "140090277265-qofd0tosaqn3rfsue9bap1oftm277r5o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "pl.programistok.yoapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
