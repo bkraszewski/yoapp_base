@@ -13,6 +13,10 @@ class Repository {
   }
 
   void saveNewPerson(Person person) {
-    // TODO
+    Firestore.instance.collection("people").document()
+        .setData({
+      "name":person.name,
+      "token": person.token
+    });
   }
 }
