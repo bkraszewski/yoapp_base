@@ -9,8 +9,11 @@ dependencies:
   flutter:
     sdk: flutter
   cloud_firestore: ^0.12.7+1
-  firebase_messaging: 5.1.5
+  firebase_messaging: 5.1.2
   cupertino_icons: ^0.1.2
+
+  http: ^0.12.0+2
+  audioplayers: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +21,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/yo_sound.mp3 

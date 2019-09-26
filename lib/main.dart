@@ -7,10 +7,24 @@ import 'package:yoapp/repository.dart';
 
 void main() => runApp(YoApp());
 
-class YoApp extends StatelessWidget {
+class YoApp extends StatefulWidget {
+
+  @override
+  State<StatefulWidget> createState() {
+    return YoAppState();
+  }
+}
+  class YoAppState extends State<YoApp>{
 
   final repository = Repository();
   final messeging = Messaging();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    messeging.init();
+  }
 
 
   void _onNewUserAdded(String name) async {
@@ -35,7 +49,9 @@ class YoApp extends StatelessWidget {
                 return ListView.builder(
                     itemCount: snapshot.data.length,
                     itemBuilder: (context, position) {
-                      return YoListItem(snapshot.data[position]);
+                      return YoListItem(snapshot.data[position], (token ) {
+                        messeging.sendMessage(token);
+                      });
                     });
             }
           },
@@ -91,12 +107,13 @@ class AddNewUserButton extends StatelessWidget {
 class YoListItem extends StatelessWidget {
 
   final Person person;
+  final Function(String)callback;
 
-  YoListItem(this.person);
+  YoListItem(this.person, this.callback);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return GestureDetector(child: Container(
       color: Colors.primaries[Random().nextInt(Colors.primaries.length)],
       child: Padding(
         padding: EdgeInsets.all(16),
@@ -107,7 +124,10 @@ class YoListItem extends StatelessWidget {
               fontWeight: FontWeight.bold
           ),
           textAlign: TextAlign.center,),),
-    );
+    ),
+    onTap: (){
+      callback(person.token);
+    },);
   }
 
 }
